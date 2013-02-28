@@ -59,10 +59,53 @@ Less Code, But Still Clear
 Functional-style
 ----------------
 
-not so pretty in Python
-
 .. code-block:: python
 
   foos = map(lambda item: item.foo, my_stuff)
+
+Ugly in Python
+
+
+Functional-style
+----------------
+
+.. code-block:: python
+
+  small = filter(lambda num: num < 5, values)
+
+Also Ugly in Python
+
+
+Filtering
+---------
+
+.. code-block:: python
+
+  small = [num for num in values if num < 5]
+
+
+Not Always Best
+---------------
+
+.. code-block:: python
+
+  v2 = [num for num in values]
+
+.. code-block:: python
+
+  v2 = list(values)
+
+
+Not Always Best
+---------------
+
+.. code-block:: python
+
+  trunc = [int(num) for num in values]
+
+.. code-block:: python
+
+  trunc = map(int, values)
+
 
 
