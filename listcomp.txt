@@ -237,7 +237,7 @@ Python 2.4+
 Generator Expression
 --------------------
 
-.. code-block::
+.. code-block:: python
 
   num_books = sum(len(author.books)
                   for author in authors)
@@ -246,7 +246,7 @@ Generator Expression
 Generator Expression
 --------------------
 
-.. code-block::
+.. code-block:: python
 
   deceased = sum(1 for author in authors if author.deceased)
 
@@ -254,7 +254,7 @@ Generator Expression
 Generator Expression
 --------------------
 
-.. code-block::
+.. code-block:: python
 
   have_x = any(book.title.startswith('X')
                for author in authors
