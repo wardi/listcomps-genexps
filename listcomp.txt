@@ -208,8 +208,8 @@ Examples
 .. code-block:: python
 
   author_lookup = dict([(book.isbn, author)
-         for author in authors
-         for book in author.books])
+                        for author in authors
+                        for book in author.books])
 
 Dict Comprehension
 ------------------
@@ -217,8 +217,8 @@ Dict Comprehension
 .. code-block:: python
 
   author_lookup = {book.isbn: author
-         for author in authors
-         for book in author.books}
+                   for author in authors
+                   for book in author.books}
 
 Python 2.7+
 
