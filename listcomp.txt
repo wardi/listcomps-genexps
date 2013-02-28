@@ -48,8 +48,8 @@ Why Listcomps?
   foos = get_foos(my_stuff)
 
 
-Less Code, But Still Clear
---------------------------
+List Comprehension
+------------------
 
 .. code-block:: python
 
@@ -108,4 +108,117 @@ Not Always Best
   trunc = map(int, values)
 
 
+Deconstructing Listcomps
+------------------------
 
+.. code-block:: python
+
+  out = [A for B in C]
+
+.. code-block:: python
+
+  out = []
+  for B in C:
+      out.append(A)
+
+
+Deconstructing Listcomps
+------------------------
+
+.. code-block:: python
+
+  out = [A for B in C if D]
+
+.. code-block:: python
+
+  out = []
+  for B in C:
+      if D:
+          out.append(A)
+
+
+Deconstructing Listcomps
+------------------------
+
+.. code-block:: python
+
+  out = [A for B in C if D for E in F]
+
+.. code-block:: python
+
+  out = []
+  for B in C:
+      if D:
+          for E in F:
+              out.append(A)
+
+
+Deconstructing Listcomps
+------------------------
+
+.. code-block:: python
+
+  out = [A for B in C if D for E in F if G]
+
+.. code-block:: python
+
+  out = []
+  for B in C:
+      if D:
+          for E in F:
+              if G:
+                  out.append(A)
+
+
+Examples
+--------
+
+.. code-block:: python
+
+  out = [book.title
+         for author in authors
+         if author.deceased
+         for book in author.books
+         if book.bestseller]
+
+Examples
+--------
+
+.. code-block:: python
+
+  out = [(author, book)
+         for author in authors
+         for book in author.books]
+
+
+Examples
+--------
+
+.. code-block:: python
+
+  author_lookup = dict([(book.isbn, author)
+         for author in authors
+         for book in author.books])
+
+Dict Comprehension
+------------------
+
+.. code-block:: python
+
+  author_lookup = {book.isbn: author
+         for author in authors
+         for book in author.books}
+
+Python 2.7+
+
+
+Generator Expression
+--------------------
+
+.. code-block:: python
+
+  author_lookup = dict((book.isbn, author)
+         for author in authors
+         for book in author.books)
+
+Python 2.4+
