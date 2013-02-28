@@ -269,6 +269,8 @@ Generators
 http://bit.ly/itergen1
 ======================
 
+(redirects to http://excess.org/article/2013/02/itergen1/)
+
 End
 ---
 
