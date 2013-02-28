@@ -3,6 +3,8 @@ List Comprehensions and Generator Expressions
 
 Ian Ward
 
+http://excess.org/
+
 Ottawa Python Authors Group
 
 February 28
@@ -260,6 +262,12 @@ Generator Expression
                for author in authors
                for book in author.books)
 
+
+Generators
+----------
+
+http://bit.ly/itergen1
+======================
 
 End
 ---
