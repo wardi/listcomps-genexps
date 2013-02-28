@@ -1,5 +1,5 @@
-Listcomps and Genexps
----------------------
+List Comprehensions and Generator Expressions
+---------------------------------------------
 
 Ian Ward
 
@@ -11,7 +11,7 @@ February 28
 For Beginners
 -------------
 
-This talk
+(this talk)
 
 
 For Everyone Else
@@ -50,6 +50,19 @@ Why Listcomps?
 
 List Comprehension
 ------------------
+
+.. code-block:: python
+
+  def get_foos(stuff):
+      """
+      return a list of the foos in stuff
+      """
+      out = []
+      for item in stuff:
+          out.append(item.foo)
+      return out
+
+  foos = get_foos(my_stuff)
 
 .. code-block:: python
 
@@ -176,10 +189,8 @@ Examples
 .. code-block:: python
 
   out = [book.title
-         for author in authors
-         if author.deceased
-         for book in author.books
-         if book.bestseller]
+         for author in authors if author.deceased
+         for book in author.books if book.sold > 1e6]
 
 Examples
 --------
@@ -222,3 +233,59 @@ Generator Expression
          for book in author.books)
 
 Python 2.4+
+
+
+End
+---
+
+(of serious presentation)
+
+
+Stupid Listcomp Tricks
+----------------------
+
+.. code-block:: python
+
+  >>> [x for x in range(5) for y in (1,2)]
+  [0, 0, 1, 1, 2, 2, 3, 3, 4, 4]
+
+
+Stupid Listcomp Tricks
+----------------------
+
+.. code-block:: python
+
+  >>> class Baz(object):
+  ...     pass
+  ...
+  >>> b = Baz()
+  >>> [1 for b.foo in ['bar']]
+  [1]
+  >>> b.foo
+  'bar'
+
+
+Stupid Listcomp Tricks
+----------------------
+
+.. code-block:: python
+
+  >>> x = [['hello', 'world'], ['nice', 'to', 'meet'], ['you']]
+  >>> [x for x in x for x in x]
+  ['hello', 'world', 'nice', 'to', 'meet', 'you']
+
+.. code-block:: python
+
+  >>> [inner for outer in x for inner in outer]
+
+Stupid Listcomp Tricks
+----------------------
+
+.. code-block:: python
+
+  >>> y = []
+  >>> y.append([1 for y in [[]]])
+  >>> y
+  []
+
+(fixed in Python 3)
