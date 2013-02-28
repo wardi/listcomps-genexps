@@ -225,8 +225,8 @@ Generator Expression
 .. code-block:: python
 
   author_lookup = dict((book.isbn, author)
-         for author in authors
-         for book in author.books)
+                       for author in authors
+                       for book in author.books)
 
 Python 2.4+
 
@@ -245,6 +245,16 @@ Generator Expression
 .. code-block::
 
   deceased = sum(1 for author in authors if author.deceased)
+
+
+Generator Expression
+--------------------
+
+.. code-block::
+
+  have_x = any(book.title.startswith('X')
+               for author in authors
+               for book in author.books)
 
 
 End
