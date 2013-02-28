@@ -21,14 +21,18 @@ Problem 1:
 
 .. code-block:: python
 
-  [x for x in x for x in x]
+  >>> x = ?
+  >>> [x for x in x for x in x]
+  ?
 
 Problem 2:
 
 .. code-block:: python
 
-  y = []
-  y.append(?)
+  >>> y = []
+  >>> y.append(?)
+  >>> y
+  []
 
 
 Why Listcomps?
@@ -292,6 +296,15 @@ Stupid Listcomp Tricks
 
 .. code-block:: python
 
+  >>> x = ?
+  >>> [x for x in x for x in x]
+  ?
+
+Stupid Listcomp Tricks
+----------------------
+
+.. code-block:: python
+
   >>> x = [['hello', 'world'], ['nice', 'to', 'meet'], ['you']]
   >>> [x for x in x for x in x]
   ['hello', 'world', 'nice', 'to', 'meet', 'you']
@@ -299,6 +312,16 @@ Stupid Listcomp Tricks
 .. code-block:: python
 
   >>> [inner for outer in x for inner in outer]
+
+Stupid Listcomp Tricks
+----------------------
+
+.. code-block:: python
+
+  >>> y = []
+  >>> y.append(?)
+  >>> y
+  []
 
 Stupid Listcomp Tricks
 ----------------------
