@@ -1,0 +1,68 @@
+Listcomps and Genexps
+---------------------
+
+Ian Ward
+
+Ottawa Python Authors Group
+
+February 28
+
+
+For Beginners
+-------------
+
+This talk
+
+
+For Everyone Else
+-----------------
+
+Problem 1:
+
+.. code-block:: python
+
+  [x for x in x for x in x]
+
+Problem 2:
+
+.. code-block:: python
+
+  y = []
+  y.append(?)
+
+
+Why Listcomps?
+--------------
+
+.. code-block:: python
+
+  def get_foos(stuff):
+      """
+      return a list of the foos in stuff
+      """
+      out = []
+      for item in stuff:
+          out.append(item.foo)
+      return out
+
+  foos = get_foos(my_stuff)
+
+
+Less Code, But Still Clear
+--------------------------
+
+.. code-block:: python
+
+  foos = [item.foo for item in my_stuff]
+
+
+Functional-style
+----------------
+
+not so pretty in Python
+
+.. code-block:: python
+
+  foos = map(lambda item: item.foo, my_stuff)
+
+
